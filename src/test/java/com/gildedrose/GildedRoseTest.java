@@ -35,7 +35,7 @@ class GildedRoseTest {
             String actualOutput = outputStream.toString();
 
             String expectedOutput = Files.readString(
-                Paths.get("src/test/resources/expected_output_before_feature.txt")
+                Paths.get("src/test/resources/expected_output_after_feature.txt")
             );
 
             assertEquals(expectedOutput, actualOutput);

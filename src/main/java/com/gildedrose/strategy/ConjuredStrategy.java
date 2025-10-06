@@ -9,10 +9,15 @@ public class ConjuredStrategy implements UpdateStrategy {
         item.sellIn--;
 
         if (item.quality > 0) {
-            item.quality = item.quality - 1;
+            item.quality -= 2;
 
-            if (item.sellIn < 0 && item.quality > 0)
-                item.quality = item.quality - 1;
+            if (item.sellIn < 0) {
+                item.quality -= 2;
+            }
+
+            if (item.quality < 0) {
+                item.quality = 0;
+            }
         }
     }
 }
